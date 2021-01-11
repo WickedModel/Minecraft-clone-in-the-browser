@@ -342,7 +342,7 @@ function MineKhan() {
 		hitbox: function(n) {
 			for (let x = 0; x < 16; x++) {
 				for (let y = 0; y < 16; y++) {
-					setPixel(n, x, y, 0, 0, 0, 255)
+					setPixel(n, x, y, 255, 0, 255, 255)
 				}
 			}
 		},
@@ -5447,7 +5447,7 @@ function MineKhan() {
 	// Define all the scene draw functions
 	(function() {
 		function title() {
-			let title = "MINEKHAN"
+			let title = "MINECRAFT"
 			let subtext = "JAVASCRIPT EDITION"
 			let font = "VT323,monospace"
 			strokeWeight(1)
