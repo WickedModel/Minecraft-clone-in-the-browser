@@ -80,11 +80,11 @@ This isn't entirely necessary, but it's considered best practice. Some OpenGL ES
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>MineKhan</title>
-		<link id="vtfont" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+		<title>Minecraft</title>
 		<link rel="shortcut icon" type="image/ico" href="https://willard21.github.io/MineKhan/favicon.ico">
 	</head>
 	<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 		body {
 			overflow: hidden; /* Hide scrollbars */
 		}
@@ -104,7 +104,7 @@ This isn't entirely necessary, but it's considered best practice. Some OpenGL ES
 			height: auto;
 			border: 1px solid black;
 			font-size: 18px;
-			font-family: 'Courier New', Courier, monospace;
+			font-family: "Poppins", sans-serif;
 			color: rgb(180, 180, 180);
 			margin: 0 auto;
 			margin-top: 15px;
@@ -145,7 +145,7 @@ This isn't entirely necessary, but it's considered best practice. Some OpenGL ES
 		#onhover {
 			background-color: rgba(0, 0, 0, 0.9);
 			color: rgb(200, 200, 200);
-			font-family: 'Courier New', Courier, monospace;
+			font-family: 'Poppins', sans-serif;
 			word-wrap: normal;
 			width: auto;
 			max-width: 400px;
@@ -165,6 +165,7 @@ This isn't entirely necessary, but it's considered best practice. Some OpenGL ES
 			justify-content: center;
 			text-align: center;
 			color: white;
+      font-family: 'Poppins', sans-serif;
 		}
 	</style>
 	<body>
@@ -342,7 +343,7 @@ function MineKhan() {
 		hitbox: function(n) {
 			for (let x = 0; x < 16; x++) {
 				for (let y = 0; y < 16; y++) {
-					setPixel(n, x, y, 255, 0, 255, 255)
+					setPixel(n, x, y, 255, 255, 0, 255)
 				}
 			}
 		},
@@ -978,7 +979,7 @@ function MineKhan() {
 		}
 	}
 	function textSize(size) {
-		ctx.font = size + 'px Monospace' // VT323
+		ctx.font = size + 'px Poppins' // VT323
 	}
 	let strokeWeight = function(num) {
 		ctx.lineWidth = num
@@ -5449,7 +5450,7 @@ function MineKhan() {
 		function title() {
 			let title = "MINECRAFT"
 			let subtext = "JAVASCRIPT EDITION"
-			let font = "VT323,monospace"
+			let font = "Poppins"
 			strokeWeight(1)
 			ctx.textAlign = 'center'
 
@@ -5486,7 +5487,7 @@ function MineKhan() {
 			ctx.putImageData(mainbg, 0, 0)
 			title()
 			fill(220)
-			ctx.font = "20px VT323"
+			ctx.font = "20px Poppins"
 			ctx.textAlign = 'left'
 			text("Minecraft " + version, width - (width - 2), height - 2)
 		}
